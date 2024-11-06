@@ -224,7 +224,7 @@ Window {
                                         model: 8 //How many elements should be produced
                                         delegate: ColumnLayout {
                                             Layout.alignment: Qt.AlignCenter
-                                            Layout.row: (index / 3) + 1  // Comienza en la segunda fila
+                                            Layout.row: (index / 3) + 1
                                             Layout.column: index % 3
 
                                             Text {
@@ -264,13 +264,12 @@ Window {
                                     height: 50
                                     font.pixelSize: 24
                                     background: Rectangle {
-                                        color: "#6200EA"
+                                        color: "#e0e0e0"
                                         radius: width / 2
                                         border.width: 1
                                         border.color: "black"
                                     }
                                     onClicked: {
-                                        // Acción al hacer clic en el botón
                                         console.log("RoundButton clicked")
                                     }
                                 }
