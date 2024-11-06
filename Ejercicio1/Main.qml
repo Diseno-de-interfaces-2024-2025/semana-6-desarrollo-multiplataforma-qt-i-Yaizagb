@@ -196,11 +196,10 @@ Window {
                 id: stackLayout
                 anchors.fill: parent
                 currentIndex: 0
-                // Primera vista con el GridLayout y el RoundButton
                             Item {
                                 anchors.fill: parent
 
-                                // GridLayout y RoundButton en la misma vista
+
                                 GridLayout {
                                     id: gridLayout
                                     columns: 3
@@ -208,9 +207,9 @@ Window {
                                     columnSpacing: 10
                                     anchors.fill: parent
                                     anchors.margins: 20
-                                    anchors.bottomMargin: 80  // Espacio para el botón en la parte inferior
+                                    anchors.bottomMargin: 80
 
-                                    // Título en la primera fila
+
                                     Text {
                                         text: qsTr("Elementos")
                                         font.pixelSize: 42
@@ -220,9 +219,9 @@ Window {
                                         Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                                     }
 
-                                    // Elementos en una cuadrícula de 3x3 debajo del título
+
                                     Repeater {
-                                        model: 8  // Para generar solo 8 elementos
+                                        model: 8 //How many elements should be produced
                                         delegate: ColumnLayout {
                                             Layout.alignment: Qt.AlignCenter
                                             Layout.row: (index / 3) + 1  // Comienza en la segunda fila
@@ -256,7 +255,6 @@ Window {
                                     }
                                 }
 
-                                // RoundButton en la esquina inferior derecha, dentro de la misma vista
                                 RoundButton {
                                     text: "+"
                                     anchors.bottom: parent.bottom
@@ -278,7 +276,6 @@ Window {
                                 }
                             }
 
-                            // Segunda vista en el StackLayout (vacía en este ejemplo)
                             Item {
                                 anchors.fill: parent
                                 Text {
